@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Review Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+            color: #5e158a;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 800px; /* Increased height for more text */
+            resize: vertical;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #5e158a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #471062;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Book Review Form</h1>
+        <form action="/new" method="post">
+            <label for="bookName">Title of the book</label>
+            <input type="text" id="bookName" name="book" required>
+
+            <label for="rating">Your Rating(out of 10)</label>
+            <input type="number" id="rating" name="rating" min="1" max="10" required>
+
+            <label for="theory">Your Notes</label>
+            <textarea id="theory" name="theory" required></textarea>
+
+            <button type="submit">Submit Review</button>
+        </form>
+    </div>
+</body>
+</html>
